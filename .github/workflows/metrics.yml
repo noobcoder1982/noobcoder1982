@@ -10,60 +10,71 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate GitHub metrics
+      # 🧠 MAIN HEADER
+      - name: Header metrics
         uses: lowlighter/metrics@latest
         with:
+          filename: github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: noobcoder1982
 
-          # 🎨 Layout & base
           template: classic
-          base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Kolkata
+          base: header, community, repositories, metadata
           config_display: large
           config_padding: 20
-          config_theme: dark
+          config_theme: github_dark
 
-          # 📅 Contribution calendar
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+      # 🔥 ACTIVITY + HABITS
+      - name: Activity metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-activity.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: noobcoder1982
 
-          # 📊 Languages
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_sections: most-used
-          plugin_languages_indepth: yes
+          base: activity
+          config_theme: github_dark
 
-          # 🔥 Habits / commit patterns
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_limit: 5
+
           plugin_habits: yes
           plugin_habits_days: 14
           plugin_habits_charts: yes
-          plugin_habits_trim: yes
 
-          # 📈 Activity
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 14
+          plugin_isocalendar: yes
 
-          # 🧠 Topics / tech stack
+      # 📊 LANGUAGES + TECH
+      - name: Language metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: noobcoder1982
+
+          base: ""
+          config_theme: github_dark
+
+          plugin_languages: yes
+          plugin_languages_limit: 6
+          plugin_languages_indepth: yes
+
           plugin_topics: yes
-          plugin_topics_limit: 20
-          plugin_topics_sort: stars
+          plugin_topics_limit: 15
 
-          # 📌 Repositories
-          plugin_repositories: yes
-          plugin_repositories_pinned: 6
+      # 🚀 PAGESPEED BLOCK
+      - name: PageSpeed metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-pagespeed.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: noobcoder1982
 
-          # ⭐ Stats
-          plugin_stars: yes
+          base: ""
+          config_theme: github_dark
 
-          # 🏆 Achievements
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-
-          # 🚀 PageSpeed (your setup)
           plugin_pagespeed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_API }}
           plugin_pagespeed_url: https://vinl.tech
           plugin_pagespeed_strategy: desktop, mobile
-          plugin_pagespeed_categories: performance, accessibility, best-practices, seo
