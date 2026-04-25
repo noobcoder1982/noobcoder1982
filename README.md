@@ -9,18 +9,19 @@
   Building • Designing • Shipping
 </p>
 
-<!-- 📊 HEADER -->
+<!-- 🧠 HEADER -->
 <p align="center">
   <img src="./github-metrics.svg" width="100%">
 </p>
 
-<!-- ⚡ ROW 1 -->
+<!-- ⚡ GRID ROW 1 -->
 <p align="center">
   <img src="./metrics-activity.svg" width="49%">
   <img src="./metrics-languages.svg" width="49%">
 </p>
 
-<!-- ⚡ ROW 2 -->
+<!-- ⚡ GRID ROW 2 -->
 <p align="center">
-  <img src="./metrics-extra.svg" width="60%">
+  <img src="./metrics-extra.svg" width="49%">
+  <img src="./metrics-stats.svg" width="49%">
 </p>
