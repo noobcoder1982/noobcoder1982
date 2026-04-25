@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 🔥 HEADER
+      # 🔥 HEADER (fast & safe)
       - name: Header metrics
         uses: lowlighter/metrics@latest
         with:
@@ -28,10 +28,8 @@ jobs:
           config_padding: 20
 
           plugin_lines: yes
-          plugin_followup: yes
-          plugin_notable: yes
 
-      # ⚡ ACTIVITY
+      # ⚡ ACTIVITY (balanced)
       - name: Activity metrics
         uses: lowlighter/metrics@latest
         with:
@@ -43,15 +41,15 @@ jobs:
 
           plugin_activity: yes
           plugin_activity_limit: 5
-          plugin_activity_days: 14
+          plugin_activity_days: 7
 
           plugin_habits: yes
-          plugin_habits_days: 14
+          plugin_habits_days: 7
           plugin_habits_charts: yes
 
           plugin_isocalendar: yes
 
-      # 🧠 LANGUAGES
+      # 🧠 LANGUAGES (clean)
       - name: Language metrics
         uses: lowlighter/metrics@latest
         with:
@@ -66,9 +64,9 @@ jobs:
           plugin_languages_indepth: yes
 
           plugin_topics: yes
-          plugin_topics_limit: 15
+          plugin_topics_limit: 12
 
-      # 🧩 EXTRA
+      # 🧩 EXTRA (lightweight flex stats)
       - name: Extra metrics
         uses: lowlighter/metrics@latest
         with:
@@ -80,4 +78,3 @@ jobs:
 
           plugin_stars: yes
           plugin_lines: yes
-          plugin_followup: yes
