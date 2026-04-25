@@ -22,6 +22,5 @@
 
 <!-- ⚡ ROW 2 -->
 <p align="center">
-  <img src="./metrics-extra.svg" width="49%">
-  <img src="./metrics-pagespeed.svg" width="49%">
+  <img src="./metrics-extra.svg" width="60%">
 </p>
