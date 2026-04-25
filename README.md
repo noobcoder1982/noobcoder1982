@@ -1,7 +1,15 @@
-<h1 align="center">Abhijeet Panda</h1>
-<p align="center">Building • Designing • Shipping</p>
+<!-- 🔥 BANNER -->
+<p align="center">
+  <img src="./banner.png" width="100%" />
+</p>
 
-<!-- 🔥 HEADER -->
+<!-- 👤 NAME -->
+<h1 align="center">Abhijeet Panda</h1>
+<p align="center">
+  Building • Designing • Shipping
+</p>
+
+<!-- 📊 HEADER -->
 <p align="center">
   <img src="./github-metrics.svg" width="100%">
 </p>
