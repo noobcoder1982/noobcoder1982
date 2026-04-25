@@ -78,3 +78,18 @@ jobs:
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_API }}
           plugin_pagespeed_url: https://vinl.tech
           plugin_pagespeed_strategy: desktop, mobile
+      # 🧩 EXTRA (stars + achievements + lines)
+      - name: Extra metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-extra.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: noobcoder1982
+
+          base: ""
+          config_theme: github_dark
+
+          plugin_stars: yes
+          plugin_achievements: yes
+          plugin_lines: yes
+          plugin_followup: yes
